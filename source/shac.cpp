@@ -1,17 +1,24 @@
 #include<iostream>
 #include<string.h>
 
-int main()
+int main(int argc, char *argv[])
 {
-     std::string shasum1, shasum2;
-     std::cin >> shasum1 >> shasum2;
-     if(shasum1 == shasum2)
+     if(argc != 3)
      {
-          std::cout << "SUCCESS" << std::endl;
+          std::cout << "USAGE: " << argv[0] << " shasum1 shasum2" << std::endl;
      }
      else
      {
-          std::cout << "FAILURE" << std::endl;
+          std::string shasum1 = argv[1];
+          std::string shasum2 = argv[2];
+          if(shasum1 == shasum2) //BECAUSE THEY ARE POINTERS!!!!!!!!
+          {
+               std::cout << "SUCCESS" << std::endl;
+          }
+          else
+          {
+               std::cout << "FAILURE" << std::endl;
+          }
      }
      return 0;
 }
