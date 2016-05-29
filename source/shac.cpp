@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
      {
           std::string shasum1 = argv[1];
           std::string shasum2 = argv[2];
-          if(shasum1 == shasum2) //BECAUSE THEY ARE POINTERS!!!!!!!!
+          if(shasum1 == shasum2)
           {
                std::cout << "SUCCESS" << std::endl;
           }
